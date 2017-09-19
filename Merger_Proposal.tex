@@ -1,0 +1,30 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\title{Merger Arbitrage Proposal}
+
+\author{Tianyuan Liu, Haoran Wang}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Project Idea}
+\label{sec:idea}
+
+One of the classic event-driven investment strategy in finance is called merger arbitrage. Every year, hundreds of public companies in the US are bought out (merged) by other companies. In order to successfully acquire the target company, the acquirer needs to pay a premium, which causes the target company’s share price to jump post-announcement. Since there is uncertainty regarding the success of the acquisition, the target’s post-announcement share price is usually below the acquirer’s offer price. This leads naturally to an investment strategy. If one can accurately predict the success/failure of the merger, one can buy the stocks that will succeed and short the stocks that will fail. In the past, investors calculate financials, examine strategic fit, and read press releases, all to determine the probability of the merger’s success. 
+
+\section{Project Question}
+\label{sec:question}
+
+Our project tries to create a model that would mimic such an investor. There are two parts in this strategy: 1. determine merger’s probability of success 2. Determine the optimal trading strategy given the probability of success. Our project will mainly focus on the first part: can we use regression and classification models to predict success/failure of pending mergers? If successful, we will then use our model and back-test a simple strategy in the U.S. equity market.
+
+\section{Project Data}
+\label{sec:data}
+
+Our dataset will primarily come from SDC Platinum, a widely used database in corporate finance. The database contains a full list of all historical mergers in the US. We restrict our data to only include those that involve a public entity as target. The database also provides basic valuation and price data. In addition, we will utilize CRSP and COMPUSTAT, two widely used database in empirical finance. CRSP and COMPUSTAT will provide additional information regarding the acquirer/target, and allow us to back-test our strategy.
+
+\end{document}
