@@ -21,9 +21,9 @@ Our project aims to predict the success/failure of a pending merger deal. If we 
 \section{Data Description and Cleaning }
 \label{sec:data}
 
-Our data set primarily comes from SDC Platinum, a widely used M\&A database in corporate finance. We restrict our data to the years between 1990 and 2016, and only include those that involve a public entity as target. Non-public companies not only lack basic data like purchase price, but are also not market traded.
+Our data set primarily comes from SDC Platinum, a widely used M\&A database in corporate finance. We restrict our data to the years between 1990 and 2016, and only include those that involve a public entity as target. Non-public companies are excluded due to the lack of basic data like purchase price.
 
-Originally, our data has 11678 data points (rows) and 29 features (columns). A shortened summary table of the features and brief description is available at the end. The feature of interest is "Status". Status can take the following values: Completed, Dis Rumor, Intended, Part Comp, Pending, Rumor, Status Unknown, Withdrawn. To simplify our problem, we categorize all values other than "Completed" and "Pending" into "Failed", then we disregard all "Pending" values. Thus our problem becomes a binary classification problem. We further remove all data points that don't have "Price Per Share", the Acquiror's proposed acquisition price. This is justified by the fact that without a known acquisition price, one has no way forming a trading strategy. We are now left with 9023 data points, which includes 7432 "Completed" and 1591 "Failed".
+Originally, our data has 11678 data points (rows) and 29 features (columns). A shortened summary table of the features and brief description is available at the Appendix. The feature of interest is "Status". Status can take the following values: Completed, Dis Rumor, Intended, Part Comp, Pending, Rumor, Status Unknown, Withdrawn. To simplify our problem, we categorize all values other than "Completed" and "Pending" into "Failed", then we disregard all "Pending" values. Thus our problem becomes a binary classification problem. We further remove all data points that don't have "Price Per Share", the Acquiror's proposed acquisition price, or with a "Price Per Share" lower than \$1. This is standard practice in the finance literature and justified by the fact that without a known acquisition price, one has no way forming a trading strategy. Stocks that have a share price below \$ 1 usually exhibit funny behaviors and are often excluded from the analyze. We are now left with 8963 data points, which includes 7383 "Completed" and 1580 "Failed".
 
 We then start creating features through feature transformation. Broadly speaking, the new features can be separated into three categories: Valuation, Deal Characteristic, Macro variables. The table below describes each variable. We also made histogram plots of various variables to get a sense of the variables distribution.
 
@@ -49,7 +49,7 @@ We next try a simple decision tree. We provide a illustrative graph below as an 
 
 \end{center}
 
-We then try a random forest classifier. Compared to a simple decision tree, a random forest classifier is much less prone to overfitting. The random forest classifier performs slightly better. After choosing parameters using cross-validation, the model outperforms the benchmark by around 1 percent.  The random forest classifier also allows us to calculate the importance of each feature. We provide a bar chart below that shows the top 15 important features. Consistent with our intuition, "Offer/Current Price Diff" is the most important feature. 
+We then try a random forest classifier. Compared to a simple decision tree, a random forest classifier is much less prone to over-fitting. The random forest classifier performs slightly better. After choosing parameters using cross-validation, the model outperforms the benchmark by around 1 percent.  The random forest classifier also allows us to calculate the importance of each feature. We provide a bar chart below that shows the top 15 important features. Consistent with our intuition, "Offer/Current Price Diff" is the most important feature. 
 
 \begin{center}
 \includegraphics[scale=0.5]{Feature_Importance.png} 
@@ -60,7 +60,7 @@ We then try a random forest classifier. Compared to a simple decision tree, a ra
 \section{Future Steps }
 \label{sec:future}
 
-The current improvement over the benchmark is clearly unsatisfying. Going forward, we plan to introduce more features that potentially have predictive power. 
+The current improvement over the benchmark is clearly unsatisfying. Going forward, we plan to introduce more features that potentially have predictive power. One feature that comes to mind is the implied volatility of the company's options before and after the merger announcement. This data can be found from OptionMetrics.
 
 
 \section{Appendix }
