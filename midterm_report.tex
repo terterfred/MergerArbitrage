@@ -16,7 +16,7 @@
 \section{Project Introduction}
 \label{sec:idea}
 
-Our project aims to predict the success/failure of a pending merger deal. If we can successfully predict deal's success/failure, we can then take advantage of the fact that the target’s post-announcement share price is usually below the acquiror's offer price and build a trading strategy. 
+One of the classic event-driven investment strategy in finance is called merger arbitrage. Every year, hundreds of public companies in the US are bought out (merged) by other companies. In order to successfully acquire the target company, the acquirer needs to pay a premium, which causes the target company’s share price to jump post-announcement. Since there is uncertainty regarding the success of the acquisition, the target’s post-announcement share price is usually below the acquirer’s offer price. This leads naturally to an investment strategy. If one can accurately predict the success/failure of the merger, one can buy the stocks that will succeed and short the stocks that will fail. Thus, our project goal is to create a model that predicts the success/failure of pending mergers.
 
 \section{Data Description and Cleaning }
 \label{sec:data}
@@ -62,7 +62,7 @@ We then try a random forest classifier. Compared to a simple decision tree, a ra
 
 The current improvement over the benchmark is clearly unsatisfying. Going forward, we plan to introduce more features that potentially have predictive power. One feature that comes to mind is the implied volatility of the company's options before and after the merger announcement. This data can be found from OptionMetrics.
 
-
+\newpage 
 \section{Appendix }
 \label{sec:tables}
 
@@ -82,7 +82,7 @@ Experienced              & more then 1 less then 20                            \
 nation diff              & Whether target and acquiror are from different nations       \\
 industry diff            & Whether target and acquiror are from different industrys     \\
 Offer/Current Price Diff & Offer price / price 1 day after announcement                 \\
-price premium            & Offer price / price 1 day before announcement                \\
+Price Premium            & Offer price / price 1 day before announcement                \\
 cap diff                & Capitalization difference between target and acquiror       
 \end{tabular}
 \end{table}
