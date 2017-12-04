@@ -65,13 +65,10 @@ Before fitting the data with a model, we first need to specify what we are tryin
 We now have 73 features in our data set. It is likely that many of the features are redundant. Thus we start our analysis using a logistic regression with L1 penalty. Unfortunately, the logistic model fails to outperform the benchmark; however, as expected, the lasso penalty quickly kills the majority of features. 
 \\
 \\
-We next try a simple decision tree. We provide a illustrative graph below as an example of a possible split. It should be noted that one node only has 1 value, which is a dangerous sign of over fitting. 
+We next try a simple decision tree. We provide a illustrative graph in the Appendix as an example of a possible split. It should be noted that one node only has 1 value, which is a dangerous sign of over fitting. 
 \\
 \\
-\begin{center}
-\includegraphics[width=14cm, height=5cm]{tree.png} 
 
-\end{center}
 
 We then try a random forest classifier. Compared to a simple decision tree, a random forest classifier is much less prone to over-fitting. The random forest classifier performs slightly better. After choosing parameters using cross-validation, the model outperforms the benchmark by around 0.2 percent. This out-performance is not significantly different from the benchmark and nearly negligible. The random forest classifier also allows us to calculate the importance of each feature. We provide a bar chart below that shows the top features. Consistent with our intuition, "Offer/Current Price Diff" is the most important feature. We note that the training success rate is particularly high, which might indicate over-fitting. Cross-validation might not be enough, given the high dimensionality. It should be noted that the random forest is the only model that slightly outperformed the benchmark
 \\
@@ -138,5 +135,10 @@ Decision Tree with 0 as NA                  & 0.822         & 0.831        \\ \h
 Benchmark                                   &               & 0.836       
 \end{tabular}
 \end{table}
+
+\begin{center}
+\includegraphics[width=20cm, height=8cm, angle=90]{tree.png} 
+
+\end{center}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.26)  3 DEC 2017 21:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.26)  3 DEC 2017 22:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -612,33 +612,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--71
 
  []
 
-<tree.png, id=20, 2705.10625pt x 613.29124pt>
-File: tree.png Graphic file (type png)
- <use tree.png>
-Package pdftex.def Info: tree.png used on input line 72.
-(pdftex.def)             Requested size: 398.31865pt x 142.2612pt.
- [3]
-Underfull \hbox (badness 10000) in paragraph at lines 76--79
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--79
+Underfull \hbox (badness 10000) in paragraph at lines 73--76
 
  []
 
-<Feature_Importance.png, id=24, 1167.36125pt x 687.56876pt>
+[3] <Feature_Importance.png, id=23, 1167.36125pt x 687.56876pt>
 File: Feature_Importance.png Graphic file (type png)
 
 <use Feature_Importance.png>
-Package pdftex.def Info: Feature_Importance.png used on input line 81.
+Package pdftex.def Info: Feature_Importance.png used on input line 78.
 (pdftex.def)             Requested size: 398.3404pt x 227.6223pt.
- [4 <./tree.png> <./Feature_Importance.png>]
-[5] [6] (./Final Report.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ [4 <./Feature_Importance.png>]
+<tree.png, id=28, 2705.10625pt x 613.29124pt>
+File: tree.png Graphic file (type png)
+ <use tree.png>
+Package pdftex.def Info: tree.png used on input line 140.
+(pdftex.def)             Requested size: 569.03845pt x 227.61606pt.
+ [5] [6 <./tree.png>] (./Final Report.aux) ) 
 Here is how much of TeX's memory you used:
  2746 strings out of 494437
  37625 string characters out of 6166645
@@ -646,15 +642,15 @@ Here is how much of TeX's memory you used:
  6059 multiletter control sequences out of 15000+600000
  8194 words of font info for 29 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 39i,8n,32p,1199b,192s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2017basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx1
-2.pfb></usr/local/texlive/2017basic/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr10.pfb></usr/local/texlive/2017basic/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr12.pfb></usr/local/texlive/2017basic/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr17.pfb></usr/local/texlive/2017basic/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr7.pfb></usr/local/texlive/2017basic/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb>
-Output written on "Final Report.pdf" (6 pages, 288011 bytes).
+ 39i,8n,32p,1199b,196s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017basic/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2017basic/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017basi
+c/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017b
+asic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/20
+17basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
+2017basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on "Final Report.pdf" (6 pages, 287972 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream
